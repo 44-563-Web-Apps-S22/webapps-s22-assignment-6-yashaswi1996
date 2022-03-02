@@ -20,6 +20,9 @@
 <div class = "container">
     <p id="result">This text will be replaced </p>
 </div>
+<div class="container">
+    <img id="image" src="Nightingale.JPG" alt="Nightingale" height="100" width="100" onclick="swapImage()">
+</div>
 <script> 
 let correct = 0;
 let wrong = 0;
@@ -52,6 +55,29 @@ function incorrectcheckGuess(){
     alert("Account Locked")
 }
 </script>
+<script>
+    var useImage = 1;
+    function swapImage()
+     {
+              switch (useImage) {
+                  case 1:
+                      image = document.getElementById("image").src = "Nightingale.jpg"
+                      useImage = 2
+                      break
+                  case 2:
+                      image = document.getElementById("image").src = "mew gull.jpg"
+                      useImage = 3
+                      break
+                  case 3:
+                      image = document.getElementById("image").src = "abd al kuri sparrow.jpg"
+                      useImage = 1
+                      break
+                  default:
+                      break
+              }
+          }
+    </script>
+    
 
 </body>
 </html>
