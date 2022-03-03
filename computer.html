@@ -25,6 +25,17 @@
 
   <p id="result"></p>
   <br>
+  <form>
+    <label for="propertyname">Enter a property name </label>
+    <input type ="text" id="propertyname" name="propertyname" min=10 max=50 step=2 value="engraved"> <br><br>
+
+    <label for="propertyvalue">Enter a value</label>
+    <input type ="text" id="propertyvalue" name="propertyvalue" autofocus > <br> <br>
+
+    <input type="button" onclick="updateComputer()" value="Update the computer">
+</form>
+<p id="result"></p>
+<br>
   <script>
     function orderComputer(){
 
@@ -53,6 +64,15 @@
 
   document.getElementById("results").innerHTML="<b>Extra Money:</b>"+my_computer.extra+", <b>Mouse:</b>"+my_computer.Mouse+", <b>Cell Service:</b>"+my_computer.cell
 }
+var my_computer={}
+    
+    function updateComputer(){
+       var a=document.getElementById("propertyname").value
+       var b=document.getElementById("propertyvalue").value
+        my_computer[a]=b
+        document.getElementById("result").innerHTML=a+":"+b+" <b>Successfully added</b>"
+        console.log(my_computer)
+    }
 </script>
 
 </body>
