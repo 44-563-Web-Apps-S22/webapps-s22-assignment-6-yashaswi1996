@@ -1,0 +1,59 @@
+!DOCTYPE html>
+<html>
+    <head>
+        <title> Web WebPage</title>
+    </head>
+ 
+<body>
+
+<h2>Yashaswi Nagamalla orders a computer</h2>
+<form >
+    <input type="checkbox" id="extraMemory" name="extraMemory"   
+      value="extra" checked>
+    <label for="extraMemory">Extra memory</label></br>
+  
+    <input type="checkbox" id="Mouse" name="Mouse" 
+       value="mouse" checked>
+    <label for="Mouse">Mouse</label></br>
+  
+    <input type="checkbox" id="cellService" name="cellService"   
+       value="cell" checked>
+    <label for="cellService">Cell service</label></br>
+
+    <input type="button" onclick="orderComputer()" value="Order a Computer">
+  </form>
+
+  <p id="result"></p>
+  <br>
+  <script>
+    function orderComputer(){
+
+     extra=document.getElementById("extraMemory").checked
+     mouse = document.getElementById("Mouse").checked
+     cell = document.getElementById("cellService").checked
+
+    if(extra){
+    my_computer["extra"]=true
+    }
+    else{
+    my_computer["extra"]=false
+    }
+    if(mouse){
+    my_computer["Mouse"]=true
+    }
+    else{
+    my_computer["Mouse"]=false
+    }
+    if(cell){
+    my_computer["cell"]=true
+    }
+    else{
+    my_computer["cell"]=false
+    }
+
+  document.getElementById("results").innerHTML="<b>Extra Money:</b>"+my_computer.extra+", <b>Mouse:</b>"+my_computer.Mouse+", <b>Cell Service:</b>"+my_computer.cell
+}
+</script>
+
+</body>
+</html> 
